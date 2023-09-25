@@ -46,7 +46,7 @@ if 'Region' not in st.session_state:
 def update_Region():
     st.session_state.rg=st.session_state.Region
 if 'radio' not in st.session_state:
-    st.session_state.feature="Playlist"
+    st.session_state.feature="Song"
 def update_radio0():
     st.session_state.feature=st.session_state.radio
 
