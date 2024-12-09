@@ -1,7 +1,7 @@
 pandas==1.4.4
 PyYAML==6.0
 scikit_learn==1.1.3
-spotipy==2.20.0
+spotipy
 streamlit==1.14.0
 streamlit_option_menu==0.3.2
 altair<5
