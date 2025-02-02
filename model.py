@@ -57,7 +57,7 @@ def playlist_model(url, model, max_gen=3, same_art=5):
              if len(Spotifyresult) >= 50:
                  break
              try:
-                 ff = sp.recommendations(seed_tracks=list(track_ids_uni[i:i+5]), limit=5)
+                 ff = sp.recommendations(seed_tracks=list(track_ids_uni[i:i+5]), limit=5, market='US')
              except Exception as e:
                  log.append(e)
                  continue
@@ -346,7 +346,7 @@ def song_model(url, model, max_gen=3, same_art=5):
 
      if model == 'Similarity Model':
         log.append('Starting Similarity Model')
-        aa=sp.recommendations(seed_tracks=[uri], limit=25)
+        aa = sp.recommendations(seed_tracks=[uri], limit=25, market='US')
         for i in range(25):
             Fresult.append(aa['tracks'][i]['id'])
         log.append('Model run successfully')
